@@ -1,14 +1,19 @@
 import StatusCard from "./StatusCards";
 import Skeleton from "react-loading-skeleton";
-// import { Swiper, SwiperSlide } from "swiper/react";
 import React from "react";
 import TextTransition, { presets } from "react-text-transition";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-// Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/pagination";
-
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { useRef, useEffect } from "react";
+// import { register } from "swiper/element/swiper-element";
+// register();
 // import required modules
+// Import Swiper styles
+// import "swiper/css/pagination";
+// import "swiper/css";
 // import { Autoplay, Pagination } from "swiper";
 
 function Cards(props) {
@@ -25,6 +30,15 @@ function Cards(props) {
     return () => clearTimeout(intervalId);
   }, []);
 
+  const settings = {
+    className: "slider variable-width",
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+  };
   return (
     <div class="cards d-flex align-items-center justify-content-center">
       <div class="container-fluid">
@@ -102,90 +116,44 @@ function Cards(props) {
             </div>
           </div>
           <div class="col-md-9 area-swiper">
-            {/* <Swiper
-              slidesPerView={2.2}
-              spaceBetween={20}
-              autoplay={{
-                delay: 1500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              speed={3000}
-              mousewheel={{
-                invert: true,
-                eventsTarget: "",
-              }}
-              modules={[Autoplay, Pagination]}
-              className="mySwiper"
-              grabCursor="true"
-              loopPreventsSliding="true"
-              breakpoints={{
-                // when window width is >= 320px
-                320: {
-                  slidesPerView: 2.2,
-                  spaceBetween: 15,
-                },
-                // when window width is >= 480px
-                480: {
-                  slidesPerView: 2.25,
-                  spaceBetween: 20,
-                },
-                // when window width is >= 640px
-                640: {
-                  slidesPerView: 2.25,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 2.25,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 2.25,
-                  spaceBetween: 25,
-                },
-                1800: {
-                  slidesPerView: 2.25,
-                  spaceBetween: 25,
-                },
-              }}
-            >
-              <SwiperSlide>
+            <Slider {...settings}>
+              <div>
                 <StatusCard
                   jumlah={props.allSelesaiSeminar || <Skeleton width={70} />}
                   ket="Selesai Seminar"
                   color={"var(--card-status-color1)"}
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </div>
+              <div>
                 <StatusCard
                   jumlah={props.allSelesaiKp || <Skeleton width={70} />}
                   ket="Selesai KP"
                   color={"var(--card-status-color2)"}
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </div>
+              <div>
                 <StatusCard
                   jumlah={props.allSedangKp || <Skeleton width={70} />}
                   ket="Sedang KP"
                   color={"var(--card-status-color1)"}
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </div>
+              <div>
                 <StatusCard
                   jumlah={props.allTahapPendaftaran || <Skeleton width={70} />}
                   ket="Pendaftaran"
                   color={"var(--card-status-color2)"}
                 />
-              </SwiperSlide>
-              <SwiperSlide>
+              </div>
+              <div>
                 <StatusCard
                   jumlah={props.allBelumKp || <Skeleton width={70} />}
                   ket="Belum"
                   color={"var(--card-status-color1)"}
                   isLoading={props.isLoading}
                 />
-              </SwiperSlide>
-            </Swiper> */}
+              </div>
+            </Slider>
           </div>
         </div>
       </div>
