@@ -1,0 +1,14 @@
+.status {
+  padding: 30px 25px;
+  border-radius: 16px;
+  word-wrap: break-word;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  /* height: 120px; */
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}

@@ -1,0 +1,10 @@
+.kartu {
+  display: table-cell;
+  padding: 16px;
+}
+
+.apexcharts-menu-item {
+  padding: 4px 5px;
+  font-size: 12px;
+  cursor: pointer;
+}

@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { MainPage } from "./components/MainPage.js";
+import { SkeletonTheme } from "react-loading-skeleton";
+import "./css/sidebar.css";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SkeletonTheme baseColor="#ebebeb" highlightColor="#f5f5f5">
+        <BrowserRouter>
+          <MainPage />
+        </BrowserRouter>
+      </SkeletonTheme>
     </div>
   );
 }
