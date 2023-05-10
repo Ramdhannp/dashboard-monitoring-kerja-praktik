@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import Cards from "../components/Cards.js";
+import Cards from "../components/Cards.js";
 import Tables from "../components/Tables";
 import CardBar from "../components/CardBar";
 import CardPie from "../components/CardPie";
@@ -281,7 +281,7 @@ function Dashboard(props) {
         Status KP Mahasiswa
       </p>
       <div className="row">
-        {/* <div className="kartu col-12 col-lg-8">
+        <div className="kartu col-12 col-lg-8">
           <Cards
             title="Total Mahasiswa"
             jumlahMhs={jumlahMhs}
@@ -293,7 +293,7 @@ function Dashboard(props) {
             allTahapPendaftaran={allTahapPendaftaran}
             isLoading={isLoading}
           />
-        </div> */}
+        </div>
         <div className="kartu col-12 col-lg-4">
           <CardPie
             allBelumKp={allBelumKp}

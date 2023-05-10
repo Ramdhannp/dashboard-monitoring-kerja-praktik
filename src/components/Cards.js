@@ -1,15 +1,15 @@
 import StatusCard from "./StatusCards";
 import Skeleton from "react-loading-skeleton";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import React from "react";
 import TextTransition, { presets } from "react-text-transition";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Pagination } from "swiper";
+// import { Autoplay, Pagination } from "swiper";
 
 function Cards(props) {
   let kategori = Object.keys(props.jumlahMhsAngkatan);
@@ -102,7 +102,7 @@ function Cards(props) {
             </div>
           </div>
           <div class="col-md-9 area-swiper">
-            <Swiper
+            {/* <Swiper
               slidesPerView={2.2}
               spaceBetween={20}
               autoplay={{
@@ -185,7 +185,7 @@ function Cards(props) {
                   isLoading={props.isLoading}
                 />
               </SwiperSlide>
-            </Swiper>
+            </Swiper> */}
           </div>
         </div>
       </div>
