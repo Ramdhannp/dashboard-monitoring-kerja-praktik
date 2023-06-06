@@ -7,7 +7,7 @@ const CardPie = (props) => {
   let allSelesaiKp = props.allSelesaiKp;
   const allKp = [allBelumKp, allSelesaiKp];
   let dataKp;
-  let angkatan = Object.keys(props.selesaiKP);
+  let angkatan = Object.keys(props.selesaiKP || {});
   const [selectedAngkatan, setSelectedAngkatan] = useState("all");
 
   if (selectedAngkatan === "all") {

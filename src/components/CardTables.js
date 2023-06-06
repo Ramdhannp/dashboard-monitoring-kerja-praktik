@@ -20,7 +20,7 @@ import {
 import "@devexpress/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css";
 import "../css/tables.css";
 
-const Tables = (props) => {
+const CardTables = (props) => {
   const [columns] = useState([
     { name: "id", title: "No" },
     { name: "full_name", title: "Nama" },
@@ -46,6 +46,7 @@ const Tables = (props) => {
 
   return (
     <div className="card d-flex justify-content-end">
+      <p className="d-none">tabel</p>
       <Grid rows={rows} columns={columns} columnMinWidth={10}>
         <SearchState />
         <IntegratedFiltering />
@@ -66,4 +67,4 @@ const Tables = (props) => {
   );
 };
 
-export default Tables;
+export default CardTables;

@@ -37,7 +37,7 @@ function BarChart(props) {
       labels: {
         trim: true,
         style: {
-          fontSize: 11,
+          fontSize: 10,
         },
       },
       categories: [
@@ -45,7 +45,7 @@ function BarChart(props) {
         "Backend",
         "Frontend",
         "Web Dev",
-        "Data Enginer",
+        "Data Engineer",
         "Other",
       ],
     },

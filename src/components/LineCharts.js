@@ -2,12 +2,12 @@ import ReactApexChart from "react-apexcharts";
 import React from "react";
 
 function LineChart(props) {
-  let kategori = Object.keys(props.selesaiKP);
+  let kategori = Object.keys(props.selesaiKP || {});
 
   const series = [
     {
       name: "Mahasiswa",
-      data: Object.values(props.selesaiKP),
+      data: Object.values(props.selesaiKP || {}),
     },
   ];
   const options = {

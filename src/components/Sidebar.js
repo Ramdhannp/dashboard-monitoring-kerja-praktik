@@ -46,7 +46,7 @@ function Sidebar() {
             <img alt="" />
           </i>
           <div className="logo_name">
-            Mointoring <br /> Kerja Praktik
+            Monitoring <br /> Kerja Praktik
           </div>
         </div>
         <ul className="nav-list">

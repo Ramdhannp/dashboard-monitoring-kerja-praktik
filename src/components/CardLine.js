@@ -13,7 +13,9 @@ const CardLine = (props) => {
   return (
     <div className="cards">
       <div className="header d-flex align-items-center mb-3">
-        <h6 className="mx-2">Status KP</h6>
+        <h6 className="mx-2">
+          {status === 1 ? "Status KP Mahasiswa" : "Mahasiswa Selesai KP"}
+        </h6>
         <h6>|</h6>
         <label className="radioBtn">
           <input

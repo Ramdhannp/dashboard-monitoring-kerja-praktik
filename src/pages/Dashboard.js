@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards.js";
-import Tables from "../components/Tables";
+import Tables from "../components/CardTables.js";
 import CardBar from "../components/CardBar";
 import CardPie from "../components/CardPie";
 import CardLine from "../components/CardLine";
@@ -9,13 +9,18 @@ import TooltipBar from "../components/Tooltip";
 import "react-loading-skeleton/dist/skeleton.css";
 
 function Dashboard(props) {
+  // URL API
+  const salamsUrl = "http://localhost:3006/salams";
+  const studentsUrl = "http://localhost:3006/students";
+  const surveysUrl = "http://localhost:3006/surveys";
+
   // Fetch data API
   const [salams, setSalams] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const getDataSalams = async () => {
     try {
-      let response = await fetch("http://localhost:3006/salams");
+      let response = await fetch(salamsUrl);
       const salams = await response.json();
       setSalams(salams);
       setIsLoading(false);
@@ -32,7 +37,7 @@ function Dashboard(props) {
 
   const getDataStudents = async () => {
     try {
-      let response = await fetch("http://localhost:3006/students");
+      let response = await fetch(studentsUrl);
       const students = await response.json();
       setStudents(students);
     } catch (e) {
@@ -48,7 +53,7 @@ function Dashboard(props) {
 
   const getDataSurveys = async () => {
     try {
-      let response = await fetch("http://localhost:3006/surveys");
+      let response = await fetch(surveysUrl);
       const surveys = await response.json();
       setSurveys(surveys);
     } catch (e) {
@@ -273,7 +278,6 @@ function Dashboard(props) {
 
   return (
     <div>
-      <h2>Ramdhan</h2>
       <p
         className="second-title"
         style={{ fontWeight: 400, color: "#95A0AF", marginLeft: "10px" }}

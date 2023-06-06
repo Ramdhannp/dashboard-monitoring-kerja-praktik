@@ -9,8 +9,8 @@ import "swiper/swiper.min.css";
 import { Autoplay, Pagination } from "swiper";
 
 function Cards(props) {
-  let kategori = Object.keys(props.jumlahMhsAngkatan);
-  let jumlah = Object.values(props.jumlahMhsAngkatan);
+  let kategori = Object.keys(props.jumlahMhsAngkatan || {});
+  let jumlah = Object.values(props.jumlahMhsAngkatan || {});
 
   const [index, setIndex] = React.useState(0);
 

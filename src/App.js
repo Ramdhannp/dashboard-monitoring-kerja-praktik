@@ -6,11 +6,11 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <div>
-      <SkeletonTheme baseColor="#ebebeb" highlightColor="#f5f5f5">
-        <BrowserRouter>
+      <BrowserRouter>
+        <SkeletonTheme baseColor="#ebebeb" highlightColor="#f5f5f5">
           <MainPage />
-        </BrowserRouter>
-      </SkeletonTheme>
+        </SkeletonTheme>
+      </BrowserRouter>
     </div>
   );
 }
