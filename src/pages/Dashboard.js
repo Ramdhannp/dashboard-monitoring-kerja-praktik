@@ -13,6 +13,8 @@ function Dashboard(props) {
   const salamsUrl = "http://localhost:3006/salams";
   const studentsUrl = "http://localhost:3006/students";
   const surveysUrl = "http://localhost:3006/surveys";
+  const currentYear = new Date().getFullYear();
+  const lastYear = currentYear - 7;
 
   // Fetch data API
   const [salams, setSalams] = useState([]);
@@ -113,7 +115,7 @@ function Dashboard(props) {
     }
   });
 
-  // Menambahkan job title pada tabel surveys
+  // Menambahkan job title pada tabel surveys untuk kebutuhan bar chart
   let jobTitle = [];
   dataTiga.forEach((srvy) => {
     if (srvy.pekerjaan !== null) {
@@ -187,6 +189,7 @@ function Dashboard(props) {
       delete data["student_year"];
     }
     if (!data["final_grade"]) {
+      //jika tidak ada kolom final_grade maka tambahkan
       data.final_grade = "Belum";
     }
     if (data.nama) {
@@ -197,6 +200,16 @@ function Dashboard(props) {
 
   // sorting data
   dataGabungan.sort((a, b) => parseFloat(a.nim) - parseFloat(b.nim));
+
+  // menghapus angkatan 7 tahun kebelakang & menghapus nim yang tidak valid
+  const dataTabel = dataGabungan.filter(
+    (data) =>
+      ((data.angkatan <= currentYear && data.angkatan >= lastYear) ||
+        (data.angkatan <= currentYear.toString &&
+          data.angkatan >= lastYear.toString)) &&
+      data["nim"].length === 10 &&
+      !isNaN(data.nim)
+  );
 
   let allBelumKp = 0;
   let allTahapPendaftaran = 0;
@@ -210,7 +223,7 @@ function Dashboard(props) {
   let selesaiSeminar = {};
   let jumlahMhsAngkatan = {};
 
-  dataGabungan.forEach((data, i) => {
+  dataTabel.forEach((data, i) => {
     data.id = i + 1;
 
     jumlahMhsAngkatan[data.angkatan] =
@@ -320,7 +333,7 @@ function Dashboard(props) {
       </div>
       <div className="row">
         <div className="kartu col-lg-12">
-          <Tables dataTable={dataGabungan} />
+          <Tables dataTable={dataTabel} />
         </div>
       </div>
     </div>

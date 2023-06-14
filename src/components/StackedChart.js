@@ -36,7 +36,6 @@ export const StackedChart = (props) => {
   const options = {
     chart: {
       type: "bar",
-      height: 350,
       stacked: true,
       toolbar: {
         show: false,
@@ -56,7 +55,8 @@ export const StackedChart = (props) => {
           },
           plotOptions: {
             bar: {
-              horizontal: true,
+              horizontal: false,
+              columnWidth: "55%",
             },
           },
         },
@@ -66,7 +66,7 @@ export const StackedChart = (props) => {
       bar: {
         horizontal: false,
         borderRadius: 5,
-        columnWidth: "50%",
+        columnWidth: "25%",
         dataLabels: {
           total: {
             enabled: true,
