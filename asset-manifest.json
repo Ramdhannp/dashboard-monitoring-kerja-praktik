@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/dashboard-monitoring-kerja-praktik/static/css/main.bea81c75.css",
-    "main.js": "/dashboard-monitoring-kerja-praktik/static/js/main.05d149c6.js",
+    "main.css": "/dashboard-monitoring-kerja-praktik/static/css/main.d52feabb.css",
+    "main.js": "/dashboard-monitoring-kerja-praktik/static/js/main.6754e277.js",
     "static/js/651.35c3e781.chunk.js": "/dashboard-monitoring-kerja-praktik/static/js/651.35c3e781.chunk.js",
     "static/media/himatif.ico": "/dashboard-monitoring-kerja-praktik/static/media/himatif.3c0934a0e874a7a010d6.ico",
     "index.html": "/dashboard-monitoring-kerja-praktik/index.html",
     "static/media/eye.svg": "/dashboard-monitoring-kerja-praktik/static/media/eye.900317afc5c991b45c90.svg",
-    "main.bea81c75.css.map": "/dashboard-monitoring-kerja-praktik/static/css/main.bea81c75.css.map",
-    "main.05d149c6.js.map": "/dashboard-monitoring-kerja-praktik/static/js/main.05d149c6.js.map",
+    "main.d52feabb.css.map": "/dashboard-monitoring-kerja-praktik/static/css/main.d52feabb.css.map",
+    "main.6754e277.js.map": "/dashboard-monitoring-kerja-praktik/static/js/main.6754e277.js.map",
     "651.35c3e781.chunk.js.map": "/dashboard-monitoring-kerja-praktik/static/js/651.35c3e781.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bea81c75.css",
-    "static/js/main.05d149c6.js"
+    "static/css/main.d52feabb.css",
+    "static/js/main.6754e277.js"
   ]
 }
