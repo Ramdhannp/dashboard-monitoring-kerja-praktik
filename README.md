@@ -8,3 +8,4 @@ Key Points:
 - integrasi API dengan React JS
 - Tampilan menarik dengan animasi
 - Penggunaan Chart pada web
+- Penggunaan Framework Bootstrap
